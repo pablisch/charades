@@ -5,9 +5,6 @@ import Navbar from './components/Navbar'
 import MainPage from './pages/MainPage';
 
 import charadeSeedData from './data/charadeSeedData';
-import getRandomNumber from './utils/getRandomNumber';
-
-let randomNumber
 
 function App() {
   // eslint-disable-next-line no-unused-vars
