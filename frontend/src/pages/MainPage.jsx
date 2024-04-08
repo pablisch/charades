@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
 import Button from '../components/Button'
+import Format from '../components/Format'
+import './MainPage.css'
 
 import getRandomNumber from '../utils/getRandomNumber';
 
@@ -10,6 +12,7 @@ let randomNumber;
 const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisSessionCharades }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [completed, setCompleted] = useState(false);
+  const [words, setWords] = useState(null);
 
   useEffect(() => {
     handleSetNewCharade()
@@ -25,9 +28,20 @@ const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisS
     }
     setThisSessionCharades([...thisSessionCharades, randomNumber]);
     setCharade(charades[randomNumber]);
+    setWords(null)
+    // charade.format && setWords(charade.title.split(' ').length);
     setIsHidden(false);
     setCompleted(false);
   };
+
+  useEffect(() => {
+    // remove hyphens from title
+    if (charade.format) {
+      const title = charade.title.replace(/-/g, '')
+      console.log('title:', title)
+      setWords(title.split(' ').length);
+    }
+  }, [charade]);
 
   const handleReveal = () => {
     setIsHidden(!isHidden);
@@ -43,19 +57,20 @@ const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisS
         {!isHidden ?
           <>
             <h2><strong>{charade.title}</strong></h2>
-            <p>
-              <strong>Formats: </strong>
-              {charade.format && charade.format.join(', ')}
-            </p>
+            <div className="formats">
+            {charade.format && charade.format.map(item => (
+              <Format key={item}>{item}</Format>
+            ))}
+            </div>
           </> :
           <>
             <p>Charade is hidden</p>
             <p>Press <strong>Show Charade</strong> to reveal</p>
           </>}
       </div>
+      <Button onClick={handleSetNewCharade} disabled={completed ? false : true} >{completed ? 'Next Charade' : words && `${words} words`}</Button>
       <Button onClick={handleReveal} className={`btn ${isHidden ? '' : 'warn-btn'}`} >{isHidden ? 'Show Charade' : 'Hide Charade'}</Button>
       <Button onClick={handleCompleted} className={`btn ${!completed ? '' : 'warn-btn'}`} >{!completed ? 'Mark Done' : 'Mark Not Done'}</Button>
-      <Button onClick={handleSetNewCharade} disabled={completed ? false : true} >{completed ? 'Next Charade' : ''}</Button>
     </>
   )
 }

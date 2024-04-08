@@ -21,7 +21,7 @@ const Button = React.forwardRef(
 );
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   ariaLabel: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
