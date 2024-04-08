@@ -25,7 +25,7 @@ Button.propTypes = {
   ariaLabel: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   disabled: PropTypes.bool,
 };
 

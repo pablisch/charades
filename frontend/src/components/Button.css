@@ -1,12 +1,14 @@
 .btn {
-  width: 100%;
-  padding: 10px;
+  width: 200px;
+  height: 38px;
+  padding: 8px;
   background-color: #4caf50;
   color: #fff;
   border: 1px solid #3e8e41;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
@@ -76,6 +78,15 @@
   background-color: #ea572a !important;
 }
 
+.warn-btn {
+  background-color: #a26c5c !important;
+  border: 1px solid #562a2a;
+}
+
+.warn-btn:hover {
+  background-color: #925745 !important;
+}
+
 .left-margin {
   margin-left: 20px;
 }
@@ -121,4 +132,5 @@
   border: 1px solid #b8b8b8;
   cursor: not-allowed;
 }
+
 

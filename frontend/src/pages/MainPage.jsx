@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Button from '../components/Button'
 
 import getRandomNumber from '../utils/getRandomNumber';
 
@@ -7,6 +8,8 @@ let randomNumber;
 
 // eslint-disable-next-line no-unused-vars
 const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisSessionCharades }) => {
+  const [isHidden, setIsHidden] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
     handleSetNewCharade()
@@ -21,19 +24,38 @@ const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisS
       }
     }
     setThisSessionCharades([...thisSessionCharades, randomNumber]);
-    setCharade(charades[getRandomNumber(charades.length)]);
+    setCharade(charades[randomNumber]);
+    setIsHidden(false);
+    setCompleted(false);
   };
+
+  const handleReveal = () => {
+    setIsHidden(!isHidden);
+  }
+
+  const handleCompleted = () => {
+    setCompleted(!completed);
+  }
 
   return (
     <>
       <div className='card'>
-        <p><strong>{charade.title}</strong></p>
-        <p>
-          <strong>Formats: </strong>
-          {charade.format && charade.format.join(', ')}
-        </p>
+        {!isHidden ?
+          <>
+            <h2><strong>{charade.title}</strong></h2>
+            <p>
+              <strong>Formats: </strong>
+              {charade.format && charade.format.join(', ')}
+            </p>
+          </> :
+          <>
+            <p>Charade is hidden</p>
+            <p>Press <strong>Show Charade</strong> to reveal</p>
+          </>}
       </div>
-      <button onClick={handleSetNewCharade}>New Charade</button>
+      <Button onClick={handleReveal} className={`btn ${isHidden ? '' : 'warn-btn'}`} >{isHidden ? 'Show Charade' : 'Hide Charade'}</Button>
+      <Button onClick={handleCompleted} className={`btn ${!completed ? '' : 'warn-btn'}`} >{!completed ? 'Mark Done' : 'Mark Not Done'}</Button>
+      <Button onClick={handleSetNewCharade} disabled={completed ? false : true} >{completed ? 'Next Charade' : ''}</Button>
     </>
   )
 }
