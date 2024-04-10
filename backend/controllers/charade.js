@@ -15,7 +15,7 @@ exports.getAllTitlesAndFormats = (req, res, next) => {
 exports.addCharade = (req, res, next) => {
   console.log('you have reached the addCharade controller');
   const { title, format } = req.body;
-  console.log('title:', format, '& formats:', format);
+  console.log('title:', title, '& formats:', format);
   const charade = new Charade({
     title,
     format

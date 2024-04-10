@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "start": "concurrently \"npm run server\" \"cd ../frontend && npm run dev\"",
-    "seed:charades:dev": "MONGODB_DB='charades_DEV' node ./seed-data/seedCharades.js"
+    "seed:charades:dev": "MONGODB_DB='charades_DEV' node ./seed-data/seedCharades.js",
+    "seed:charades:prod": "MONGODB_DB='charades' node ./seed-data/seedCharades.js"
   },
   "keywords": [],
   "author": "",

@@ -91,12 +91,6 @@ const AddCharadeForm = ({setCharades}) => {
     console.log('checkedFormats:', checkedFormats);
   }, [checkedFormats]);
 
-  // const handleFileChange = (event) => {
-  //   const file = event.target.files[0];
-  //   console.log('file', file);
-  //   console.log('file name', file.name);
-  // };
-
   const clearForm = () => {
     setTitle('');
   };
