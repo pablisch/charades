@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar'
 import MainPage from './pages/MainPage';
+import AddCharadePage from './pages/AddCharadePage';
 
 import charadeSeedData from './data/charadeSeedData';
 
@@ -11,11 +12,6 @@ function App() {
   const [charades, setCharades] = useState(charadeSeedData);
   const [charade, setCharade] = useState({});
   const [thisSessionCharades, setThisSessionCharades] = useState([]);
-
-
-
-  
-  
 
   // const handleFetchAllCharades = async () => {
   //   try {
@@ -26,8 +22,6 @@ function App() {
   //     console.error('Error fetching all charades:', error);
   //   }
   // };
-
-  
 
   console.log('charade:', charade);
 
@@ -43,20 +37,13 @@ function App() {
             <MainPage charades={charades} charade={charade} setCharade={setCharade} thisSessionCharades={thisSessionCharades} setThisSessionCharades={setThisSessionCharades} />
           }
         />
-        {/* <Route
-          path='/:id'
+        <Route
+          path='/add-charade'
           element={
-            <SingleImagePage
-              selectedImage={selectedImage}
-              setSelectedImage={setSelectedImage}
-              setAvatar={setAvatar}
-              setUser={setUser}
-              imageData={imageData}
-              setImageData={setImageData}
-              setIsSideEffect={setIsSideEffect}
+            <AddCharadePage
             />
           }
-        /> */}
+        />
       </Routes>
       {/* <div className='card'>
         <p><strong>{charade.title}</strong></p>

@@ -1,7 +1,16 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 65vh;
+  padding: 30px 25px;
+}
+
 .formats {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }

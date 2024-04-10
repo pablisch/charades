@@ -1,0 +1,17 @@
+.format-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.format-checkbox label {
+  margin-right: 10px; 
+}
+
+.format-checkbox input[type='checkbox'] {
+  background-color: aquamarine;
+  width: 20px;
+}
+
+.form-field {
+  width: 80%;
+}
