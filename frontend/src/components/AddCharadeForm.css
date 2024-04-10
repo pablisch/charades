@@ -5,13 +5,19 @@
 
 .format-checkbox label {
   margin-right: 10px; 
+  width: 100px;
 }
 
 .format-checkbox input[type='checkbox'] {
-  background-color: aquamarine;
   width: 20px;
 }
 
-.form-field {
-  width: 80%;
+#format-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+#add-charade-submit-button {
+  margin-top: 25px;
 }

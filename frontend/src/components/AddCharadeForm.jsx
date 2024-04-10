@@ -9,16 +9,26 @@ import Button from './Button';
 import ErrorMessage from './ErrorMessage';
 import './AddCharadeForm.css';
 
+const formatsTypes = [
+  'Movie',
+  'TV Show',
+  'Book',
+  'Song',
+  'Play',
+  'Comic',
+  'Poem',
+  'Other',
+];
+
 const AddCharadeForm = () => {
   const [title, setTitle] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [isMovie, setIsMovie] = useState(false);
+  const [checkedFormats, setCheckedFormats] = useState([]);
 
-  
   const navigate = useNavigate();
-  
+
   const titleInputRef = useRef(null);
-  
+
   useEffect(() => {
     document.title = 'Add Charade';
     window.localStorage.clear();
@@ -26,15 +36,16 @@ const AddCharadeForm = () => {
       titleInputRef.current.focus();
     }
   }, []);
-  
+
   const handleSignUpSubmit = async (event) => {
     event.preventDefault();
-    
+
     try {
       const DbResponse = await axios.post(
-        `${baseUrl}/api/v1.0/charade/add`,
+        `${baseUrl}/api/v1.0/charade`,
         {
           title,
+          format: checkedFormats,
         },
         {
           headers: {
@@ -42,14 +53,14 @@ const AddCharadeForm = () => {
           },
         }
       );
-      
+
       if (DbResponse.status === 201) {
         const responseData = DbResponse.data;
         console.log('responseData:', responseData);
         clearForm();
         navigate('/');
       } else {
-        console.log('Something went wrong in handleSignUpSubmit');
+        console.log('Something went wrong with adding the charade.');
       }
     } catch (error) {
       console.error('Error in handleSignUpSubmit:', error);
@@ -57,15 +68,27 @@ const AddCharadeForm = () => {
       setErrorMessage(error.response.data.error);
     }
   };
-  
+
   // Input field functions
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
   };
-  
-  const handleMovieCheck = () => {
-    setIsMovie(!isMovie);
+
+  const handleFormatCheck = (format) => {
+    const isChecked = checkedFormats.includes(format);
+
+    if (isChecked) {
+      setCheckedFormats((prevFormats) =>
+        prevFormats.filter((item) => item !== format)
+      );
+    } else {
+      setCheckedFormats((prevFormats) => [...prevFormats, format]);
+    }
   };
+
+  useEffect(() => {
+    console.log('checkedFormats:', checkedFormats);
+  }, [checkedFormats]);
 
   // const handleFileChange = (event) => {
   //   const file = event.target.files[0];
@@ -96,19 +119,22 @@ const AddCharadeForm = () => {
             ref={titleInputRef}>
             Title
           </InputField>
-
-          <div className='format-checkbox'>
-  <label htmlFor="movie-checkbox">Movie</label>
-  <input
-    id="movie-checkbox"
-    type='checkbox'
-    checked={isMovie}
-    onChange={handleMovieCheck}
-  />
-</div>
+          <div id='format-checkbox-container'>
+            {formatsTypes.map((format) => (
+              <div key={format} className='format-checkbox'>
+                <label htmlFor={`${format}-checkbox`}>{format}</label>
+                <input
+                  id={`${format}-checkbox`}
+                  type='checkbox'
+                  checked={checkedFormats.includes(format)}
+                  onChange={() => handleFormatCheck(format)}
+                />
+              </div>
+            ))}
+          </div>
           <Button
             id='add-charade-submit-button'
-            disabled={title ? false : true}>
+            disabled={title && checkedFormats.length ? false : true}>
             Add Charade
           </Button>
         </form>
