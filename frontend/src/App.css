@@ -1,7 +1,8 @@
 #root {
-  margin: 10px auto 0;
+  padding: 0 auto;
   text-align: center;
   height: 80vh;
+  margin-top: 10px;
 }
 
 .read-the-docs {
