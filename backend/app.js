@@ -16,7 +16,7 @@ const charadeRoutes = require('./routes/charade');
 
 const app = express();
 
-const corsOrigin = process.env.CORS_ORIGIN || 'https://gallery-58b4.onrender.com';
+const corsOrigin = process.env.CORS_ORIGIN || 'https://charades-pthh.onrender.com';
 console.log('🪧  >>> CORS:', corsOrigin);
 
 const corsOptions = {
