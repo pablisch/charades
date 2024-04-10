@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import InputField from './InputField';
 import axios from 'axios';
 import './Form.css';
@@ -20,7 +20,7 @@ const formatsTypes = [
   'Other',
 ];
 
-const AddCharadeForm = () => {
+const AddCharadeForm = ({setCharades}) => {
   const [title, setTitle] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [checkedFormats, setCheckedFormats] = useState([]);
@@ -42,7 +42,7 @@ const AddCharadeForm = () => {
 
     try {
       const DbResponse = await axios.post(
-        `${baseUrl}/api/v1.0/charade`,
+        `${baseUrl}/api/v1.0/charades/add`,
         {
           title,
           format: checkedFormats,
@@ -57,6 +57,7 @@ const AddCharadeForm = () => {
       if (DbResponse.status === 201) {
         const responseData = DbResponse.data;
         console.log('responseData:', responseData);
+        setCharades((prevCharades) => [...prevCharades, responseData]);
         clearForm();
         navigate('/');
       } else {
@@ -108,9 +109,9 @@ const AddCharadeForm = () => {
           className='form'
           onSubmit={handleSignUpSubmit}
           noValidate>
-          <h1 id='add-charade-title' className='form-title'>
+          <h2 id='add-charade-title' className='form-title'>
             Add a Charade
-          </h1>
+          </h2>
           <InputField
             id={'title-input'}
             className='form-field'
@@ -144,7 +145,8 @@ const AddCharadeForm = () => {
   );
 };
 
-// AddCharadeForm.propTypes = {
-// };
+AddCharadeForm.propTypes = {
+  setCharades: PropTypes.func,
+};
 
 export default AddCharadeForm;

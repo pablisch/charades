@@ -53,6 +53,7 @@ const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisS
 
   return (
     <>
+      
       <div className='card'>
         {!isHidden ?
           <>

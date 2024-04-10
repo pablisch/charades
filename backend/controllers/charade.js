@@ -12,19 +12,19 @@ exports.getAllTitlesAndFormats = (req, res, next) => {
     .catch((error) => res.status(400).json({ error: error }));
 };
 
-// exports.addCharade = (req, res, next) => {
-//   console.log('you have reached the addCharade controller');
-//   const { src, altText, userId, username, userAvatar } = req.body;
-//   console.log('src:', src, '& altText:', altText, '& userId:', userId);
-//   const charade = new Charade({
-//     title,
-//     format
-//   });
-//   charade
-//     .save()
-//     .then(() => res.status(201).json({ message: 'Charade saved successfully!' }))
-//     .catch((error) => res.status(400).json({ error: error }));
-// };
+exports.addCharade = (req, res, next) => {
+  console.log('you have reached the addCharade controller');
+  const { title, format } = req.body;
+  console.log('title:', format, '& formats:', format);
+  const charade = new Charade({
+    title,
+    format
+  });
+  charade
+    .save()
+    .then(() => res.status(201).json({ message: 'Charade saved successfully!' }))
+    .catch((error) => res.status(400).json({ error: error }));
+};
 
 // exports.getSingleCharade = (req, res, next) => {
 //   Charade.findOne({ _id: req.params.id })

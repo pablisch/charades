@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar'
 import MainPage from './pages/MainPage';
 import AddCharadePage from './pages/AddCharadePage';
 
+import baseUrl from './utils/baseUrl';
 import charadeSeedData from './data/charadeSeedData';
 
 function App() {
@@ -12,16 +13,47 @@ function App() {
   const [charades, setCharades] = useState(charadeSeedData);
   const [charade, setCharade] = useState({});
   const [thisSessionCharades, setThisSessionCharades] = useState([]);
+  const [isServerUp, setIsServerUp] = useState(false);
 
-  // const handleFetchAllCharades = async () => {
-  //   try {
-  //     const response = await fetch('http://localhost:8080/api/v1.0/charades');
-  //     const data = await response.json();
-  //     setCharades(data);
-  //   } catch (error) {
-  //     console.error('Error fetching all charades:', error);
-  //   }
-  // };
+  const handleFetchAllCharades = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/v1.0/charades');
+      const data = await response.json();
+      setCharades(data);
+      console.log('Charades have been fecthed:', data[data.length - 1])
+    } catch (error) {
+      console.error('Error fetching all charades:', error);
+    }
+  };
+
+  const checkServerStatus = async () => {
+    try {
+      const response = await fetch(`${baseUrl}/api/v1.0/health/server`);
+      if (response.ok) {
+        // console.log('server is up');
+        setIsServerUp(true);
+      } else {
+        setIsServerUp(false);
+      }
+    } catch (error) {
+      setIsServerUp(false);
+    }
+  };
+
+  useEffect(() => {
+    checkServerStatus();
+    const intervalId = setInterval(() => {
+      checkServerStatus(); // check server status every x seconds
+      // console.log(isServerUp, 'still checking');
+    }, 1000);
+
+    if (isServerUp) {
+      clearInterval(intervalId);
+      handleFetchAllCharades();
+      // console.log('stop checking');
+    }
+  }, [isServerUp]);
+  
 
   console.log('charade:', charade);
 
@@ -41,6 +73,7 @@ function App() {
           path='/add-charade'
           element={
             <AddCharadePage
+            setCharades={setCharades}
             />
           }
         />

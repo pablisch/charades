@@ -1,59 +1,22 @@
 // import { useState, useEffect } from 'react';
-// import { useNavigate, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-// import { FaPlus } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
+import { FaPlusCircle } from 'react-icons/fa';
+import { IoCaretBackCircle } from "react-icons/io5";
 import './Navbar.css';
 // import NavLink from './NavLink';
 
-
 const Navbar = () => {
-
-  // const handleMouseEnter = () => {
-  //   setIsLogoRotated(true);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setIsLogoRotated(false);
-  // };
-
-  // const navigate = useNavigate();
-
-  // const logout = () => {
-  //   window.localStorage.clear();
-  //   setUserToken(null);
-  //   setUser(null);
-  // };
-
-  // const handleLogOut = () => {
-  //   logout();
-  //   navigate('/');
-  // };
-
-  // const handleAddImage = () => {
-  //   navigate('/upload');
-  // };
-
-  // const randomNumber = () => {
-  //   let num = Math.floor((Math.random() * 6) + 1);
-  //   while (num === prevNumber) {
-  //     num = Math.floor((Math.random() * 6) + 1);
-  //   }
-  //   prevNumber = num;
-  //   return num;
-  // }
+  const { pathname } = useLocation();
 
   return (
-    <>
-    {/* <nav className='navbar' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onTouchStart={handleMouseEnter} onTouchEnd={handleMouseLeave} >
-      <div className='navbar-container'>
-      </div>
-      <div className='divider-line'></div>
-      </nav> */}
-      <Link
-                id='settings-navlink'
-                >
-                </Link>
-  </>
+    <div className='nav-link-box'>
+      {pathname === '/' && <Link id='add-charade-navlink' to='/add-charade'>
+        <FaPlusCircle id='add-charade-icon' className='icon-link' />
+      </Link>}
+      {pathname === '/add-charade' && <Link id='add-charade-navlink' to='/'>
+      <IoCaretBackCircle id='back-to-charades-icon' className='icon-link' />
+      </Link>}
+    </div>
   );
 };
 

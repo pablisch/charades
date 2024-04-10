@@ -7,7 +7,7 @@ router.get('/', charadeCtrl.getAllCharades);
 
 router.get('/details', charadeCtrl.getAllTitlesAndFormats);  
 
-// router.post('/upload', auth, charadeCtrl.addCharade); 
+router.post('/add', charadeCtrl.addCharade); 
 
 // router.get('/:id', charadeCtrl.getSingleCharade); 
 
@@ -17,6 +17,6 @@ router.get('/details', charadeCtrl.getAllTitlesAndFormats);
 
 // router.put('/:id/likes', charadeCtrl.likeCharade); 
 
-// router.put('/:id', auth, multer, charadeCtrl.modifyCharade); 
+// router.put('/:id', charadeCtrl.modifyCharade); 
 
 module.exports = router; 

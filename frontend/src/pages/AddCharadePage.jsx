@@ -1,16 +1,17 @@
 import AddCharadeForm from '../components/AddCharadeForm';
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const Signup = () => {
+const Signup = ({setCharades}) => {
   
   return (
     <div>
-      <AddCharadeForm  />
+      <AddCharadeForm setCharades={setCharades}  />
     </div>
   );
 };
 
-// Signup.propTypes = {
-// };
+Signup.propTypes = {
+  setCharades: PropTypes.func,
+};
 
 export default Signup;
