@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import InputField from './InputField';
 import axios from 'axios';
@@ -20,12 +20,12 @@ const formatsTypes = [
   'Other',
 ];
 
-const AddCharadeForm = ({setCharades}) => {
+const AddCharadeForm = ({setCharades, charades}) => {
   const [title, setTitle] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [checkedFormats, setCheckedFormats] = useState([]);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const titleInputRef = useRef(null);
 
@@ -39,12 +39,21 @@ const AddCharadeForm = ({setCharades}) => {
 
   const handleSignUpSubmit = async (event) => {
     event.preventDefault();
+    setErrorMessage('');
+
+    const titles = charades.map((charade) => charade.title);
+    if (titles.includes(title)) {
+      setErrorMessage('That charade already exists.');
+      clearForm();
+      return;
+    }
+
 
     try {
       const DbResponse = await axios.post(
         `${baseUrl}/api/v1.0/charades/add`,
         {
-          title,
+          title: title,
           format: checkedFormats,
         },
         {
@@ -56,10 +65,10 @@ const AddCharadeForm = ({setCharades}) => {
 
       if (DbResponse.status === 201) {
         const responseData = DbResponse.data;
-        console.log('responseData:', responseData);
-        setCharades((prevCharades) => [...prevCharades, responseData]);
+        console.log('Charade saved. ResponseData.charade:', responseData.charade);
+        setCharades(prevCharades => [...prevCharades, { title: responseData.charade.title, format: responseData.charade.format }]);
         clearForm();
-        navigate('/');
+        // navigate('/');
       } else {
         console.log('Something went wrong with adding the charade.');
       }
@@ -141,6 +150,7 @@ const AddCharadeForm = ({setCharades}) => {
 
 AddCharadeForm.propTypes = {
   setCharades: PropTypes.func,
+  charades: PropTypes.array,
 };
 
 export default AddCharadeForm;

@@ -38,7 +38,7 @@ const MainPage = ({ charades, charade, setCharade, thisSessionCharades, setThisS
     // remove hyphens from title
     if (charade.format) {
       const title = charade.title.replace(/-/g, '')
-      console.log('title:', title)
+      // console.log('title:', title)
       setWords(title.split(' ').length);
     }
   }, [charade]);

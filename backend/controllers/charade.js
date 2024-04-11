@@ -1,29 +1,42 @@
 const Charade = require('../models/charade');
 
-exports.getAllCharades = (req, res, next) => {
-  Charade.find()
-    .then((charades) => res.status(200).json(charades))
-    .catch((error) => res.status(400).json({ error: error }));
+// exports.getAllCharades = (req, res, next) => {
+//   Charade.find()
+//     .then((charades) => res.status(200).json(charades))
+//     .catch((error) => res.status(400).json({ error: error }));
+// };
+
+exports.getAllCharades = async (req, res, next) => {
+  try {
+    const charades = await Charade.find();
+    res.status(200).json(charades);
+  } catch (error) {
+    next(error);
+  };
 };
 
-exports.getAllTitlesAndFormats = (req, res, next) => {
-  Charade.find({}, { _id: 0, title: 1, format: 1 }) // Does not return _id or __v properties
-    .then((charades) => res.status(200).json(charades))
-    .catch((error) => res.status(400).json({ error: error }));
+exports.getAllTitlesAndFormats = async (req, res, next) => {
+  try {
+    const charades = await Charade.find({}, { _id: 0, title: 1, format: 1 });
+    res.status(200).json(charades);
+  } catch (error) {
+    next(error);
+  }
 };
 
-exports.addCharade = (req, res, next) => {
-  console.log('you have reached the addCharade controller');
+exports.addCharade = async (req, res, next) => {
   const { title, format } = req.body;
-  console.log('title:', title, '& formats:', format);
+  console.log('New charade data... title:', title, '& formats:', format);
   const charade = new Charade({
     title,
     format
   });
-  charade
-    .save()
-    .then(() => res.status(201).json({ message: 'Charade saved successfully!' }))
-    .catch((error) => res.status(400).json({ error: error }));
+  try {
+    const savedCharade = await charade.save();
+    res.status(201).json({ message: 'Charade saved successfully!', charade: savedCharade });
+  } catch (error) {
+    next(error);
+  }
 };
 
 // exports.getSingleCharade = (req, res, next) => {

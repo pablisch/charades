@@ -20,7 +20,7 @@ function App() {
       const response = await fetch('http://localhost:8080/api/v1.0/charades');
       const data = await response.json();
       setCharades(data);
-      console.log('Charades have been fecthed:', data[data.length - 1])
+      console.log('Charades have been fetched. Last charade:', data[data.length - 1].title)
     } catch (error) {
       console.error('Error fetching all charades:', error);
     }
@@ -30,7 +30,6 @@ function App() {
     try {
       const response = await fetch(`${baseUrl}/api/v1.0/health/server`);
       if (response.ok) {
-        // console.log('server is up');
         setIsServerUp(true);
       } else {
         setIsServerUp(false);
@@ -43,19 +42,16 @@ function App() {
   useEffect(() => {
     checkServerStatus();
     const intervalId = setInterval(() => {
-      checkServerStatus(); // check server status every x seconds
-      // console.log(isServerUp, 'still checking');
+      checkServerStatus();
     }, 1000);
 
     if (isServerUp) {
       clearInterval(intervalId);
       handleFetchAllCharades();
-      // console.log('stop checking');
     }
   }, [isServerUp]);
-  
 
-  console.log('charade:', charade);
+  // console.log('charade:', charade);
 
   return (
     <BrowserRouter>
@@ -73,7 +69,8 @@ function App() {
           path='/add-charade'
           element={
             <AddCharadePage
-            setCharades={setCharades}
+              setCharades={setCharades}
+              charades={charades}
             />
           }
         />
