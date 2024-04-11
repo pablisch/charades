@@ -32,7 +32,7 @@ InputField.propTypes = {
   value: PropTypes.string.isRequired,
   onChangeFunc: PropTypes.func.isRequired,
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 InputField.displayName = 'InputField';

@@ -17,7 +17,7 @@ function App() {
 
   const handleFetchAllCharades = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/v1.0/charades');
+      const response = await fetch(`${baseUrl}/api/v1.0/charades`);
       const data = await response.json();
       setCharades(data);
       console.log('Charades have been fetched. Last charade:', data[data.length - 1].title)
@@ -50,6 +50,14 @@ function App() {
       handleFetchAllCharades();
     }
   }, [isServerUp]);
+
+  useEffect(() => {
+    console.log('last charade:', charades[charades.length - 1]);
+    console.log('2nd to last charade:', charades[charades.length - 2]);
+    console.log('3rd to last charade:', charades[charades.length - 3]);
+    console.log('4th to last charade:', charades[charades.length - 4]);
+    console.log('5th to last charade:', charades[charades.length - 5]);
+  }, [charades]);
 
   // console.log('charade:', charade);
 
