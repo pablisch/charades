@@ -102,6 +102,7 @@ const AddCharadeForm = ({setCharades, charades}) => {
 
   const clearForm = () => {
     setTitle('');
+    setCheckedFormats([]);
   };
 
   return (
