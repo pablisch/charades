@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import InputField from './InputField';
 import axios from 'axios';
@@ -20,12 +20,12 @@ const formatsTypes = [
   'Other',
 ];
 
-const AddCharadeForm = ({setCharades, charades}) => {
+const AddCharadeForm = ({ setCharades, charades }) => {
   const [title, setTitle] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [checkedFormats, setCheckedFormats] = useState([]);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const titleInputRef = useRef(null);
 
@@ -48,7 +48,6 @@ const AddCharadeForm = ({setCharades, charades}) => {
       return;
     }
 
-
     try {
       const DbResponse = await axios.post(
         `${baseUrl}/api/v1.0/charades/add`,
@@ -65,8 +64,17 @@ const AddCharadeForm = ({setCharades, charades}) => {
 
       if (DbResponse.status === 201) {
         const responseData = DbResponse.data;
-        console.log('Charade saved. ResponseData.charade:', responseData.charade);
-        setCharades(prevCharades => [...prevCharades, { title: responseData.charade.title, format: responseData.charade.format }]);
+        console.log(
+          'Charade saved. ResponseData.charade:',
+          responseData.charade
+        );
+        setCharades((prevCharades) => [
+          ...prevCharades,
+          {
+            title: responseData.charade.title,
+            format: responseData.charade.format,
+          },
+        ]);
         clearForm();
         // navigate('/');
       } else {
@@ -121,9 +129,8 @@ const AddCharadeForm = ({setCharades, charades}) => {
             className='form-field'
             value={title}
             onChangeFunc={handleTitleChange}
-            ref={titleInputRef}>
-            Title
-          </InputField>
+            ref={titleInputRef}
+            placeholder='Title'></InputField>
           <div id='format-checkbox-container'>
             {formatsTypes.map((format) => (
               <div key={format} className='format-checkbox'>
@@ -141,6 +148,9 @@ const AddCharadeForm = ({setCharades, charades}) => {
             id='add-charade-submit-button'
             disabled={title && checkedFormats.length ? false : true}>
             Add Charade
+          </Button>
+          <Button id='return-to-charades-button' onClick={() => navigate('/')}>
+            Return to Charades
           </Button>
         </form>
         {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
