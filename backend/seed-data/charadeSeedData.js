@@ -13,9 +13,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Imagine",
+  "title": "Die Hard",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -32,27 +32,21 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Bohemian Rhapsody",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "Casablanca",
+  "title": "Suicide Squad",
   "format": [
   "film"
   ]
   },
   {
-  "title": "1984",
+  "title": "Saving Private Ryan",
   "format": [
-  "book"
+  "book", "film"
   ]
   },
   {
-  "title": "Hotel California",
+  "title": "Mission Impossible: Fallout",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -99,15 +93,15 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Moby-Dick",
+  "title": "Raiders of the Lost Ark",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "Yesterday",
+  "title": "Gladiator",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -119,7 +113,7 @@ const charadeSeedData = [
   {
   "title": "Catch-22",
   "format": [
-  "book"
+  "book", "film"
   ]
   },
   {
@@ -149,13 +143,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Billie Jean",
+  "title": "Fu Man Chu",
   "format": [
   "song"
   ]
   },
   {
-  "title": "The Matrix",
+  "title": "The Matrix Reloaded",
   "format": [
   "film"
   ]
@@ -163,13 +157,13 @@ const charadeSeedData = [
   {
   "title": "Alice's Adventures in Wonderland",
   "format": [
-  "book"
+  "book", "film"
   ]
   },
   {
-  "title": "Hey Jude",
+  "title": "Wonder Woman 1984",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -192,7 +186,7 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Crime and Punishment",
+  "title": "Baby Driver",
   "format": [
   "book"
   ]
@@ -204,15 +198,15 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Titanic",
+  "title": "Superbad",
   "format": [
   "film"
   ]
   },
   {
-  "title": "The Adventures of Huckleberry Finn",
+  "title": "The Big Lebowski",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
@@ -231,21 +225,19 @@ const charadeSeedData = [
   {
   "title": "The Wizard of Oz",
   "format": [
+  "film", "book"
+  ]
+  },
+  {
+  "title": "Dumb and Dumber",
+  "format": [
   "film"
   ]
   },
   {
-  "title": "Gone Girl",
+  "title": "Jojo Rabbit",
   "format": [
-  "book",
   "film"
-  ]
-  },
-  {
-  "title": "Purple Rain",
-  "format": [
-  "film",
-  "song"
   ]
   },
   {
@@ -255,9 +247,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Old Man and the Sea",
+  "title": "Baywatch",
   "format": [
-  "book"
+  "tv show", "film"
   ]
   },
   {
@@ -267,15 +259,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Raiders of the Lost Ark",
+  "title": "The Shape of Water",
   "format": [
   "film"
-  ]
-  },
-  {
-  "title": "Animal Farm",
-  "format": [
-  "book"
   ]
   },
   {
@@ -298,27 +284,21 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Beatles",
-  "format": [
-  "band"
-  ]
-  },
-  {
-  "title": "The Graduate",
+  "title": "Crazy, Stupid, Love",
   "format": [
   "film"
   ]
   },
   {
-  "title": "Wuthering Heights",
+  "title": "Call Me By Your Name",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "Moon River",
+  "title": "One Flew Over the Cuckoo's Nest",
   "format": [
-  "song"
+  "film", "book"
   ]
   },
   {
@@ -328,26 +308,25 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Tell-Tale Heart",
+  "title": "Dawn of the Dead",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "I Will Always Love You",
+  "title": "The Texas Chain Saw Massacre",
   "format": [
   "song"
   ]
   },
   {
-  "title": "The Lord of the Rings: The Two Towers",
+  "title": "Ghost Dog: The Way of the Samurai",
   "format": [
-  "book",
   "film"
   ]
   },
   {
-  "title": "In the Mood for Love",
+  "title": "How to Train Your Dragon",
   "format": [
   "film"
   ]
@@ -359,9 +338,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Thriller",
+  "title": "Edward Scissorhands",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -392,20 +371,20 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Yellow Submarine",
+  "title": "How the Grinch Stole Christmas!",
   "format": [
-  "song"
+  "film", "book"
   ]
   },
   {
-  "title": "The Lord of the Rings: The Return of the King",
+  "title": "The Hurt Locker",
   "format": [
   "book",
   "film"
   ]
   },
   {
-  "title": "The Sixth Sense",
+  "title": "Psycho",
   "format": [
   "film"
   ]
@@ -417,9 +396,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Like a Prayer",
+  "title": "Interview with the Vampire",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -436,13 +415,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "My Way",
+  "title": "Buffy the Vampire Slayer",
   "format": [
-  "song"
+  "film", "tv show"
   ]
   },
   {
-  "title": "The Godfather: Part II",
+  "title": "Madagascar",
   "format": [
   "film"
   ]
@@ -455,13 +434,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Sweet Child o' Mine",
+  "title": "P.S. I Love You",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
-  "title": "Inception",
+  "title": "City of God",
   "format": [
   "film"
   ]
@@ -486,21 +465,14 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Under the Bridge",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Empire Strikes Back",
+  "title": "Apocalypse Now",
   "format": [
   "film"
   ]
   },
   {
-  "title": "Pride and Prejudice and Zombies",
+  "title": "The Empire Strikes Back",
   "format": [
-  "book",
   "film"
   ]
   },
@@ -512,44 +484,6 @@ const charadeSeedData = [
   },
   {
   "title": "The Hitchhiker's Guide to the Galaxy",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Hallelujah",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "Jurassic World",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Adventures of Tom Sawyer",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "Unchained Melody",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Green Mile",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Da Vinci Code",
   "format": [
   "book",
   "film"
@@ -569,42 +503,10 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Hobbit",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Breakfast Club",
-  "format": [
-  "film"
-  ]
-  },
-  {
   "title": "The Girl with the Dragon Tattoo",
   "format": [
   "book",
   "film"
-  ]
-  },
-  {
-  "title": "Bridge Over Troubled Water",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Green Lantern",
-  "format": [
-  "comic",
-  "film"
-  ]
-  },
-  {
-  "title": "One Hundred Years of Solitude",
-  "format": [
-  "book"
   ]
   },
   {
@@ -628,21 +530,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Godfather: Part III",
-  "format": [
-  "film"
-  ]
-  },
-  {
   "title": "The Girl on the Train",
   "format": [
   "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Terminator",
-  "format": [
   "film"
   ]
   },
@@ -667,12 +557,6 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Radioactive",
-  "format": [
-  "song"
-  ]
-  },
-  {
   "title": "Winnie-the-Pooh",
   "format": [
   "book"
@@ -682,38 +566,6 @@ const charadeSeedData = [
   "title": "I Want to Hold Your Hand",
   "format": [
   "song"
-  ]
-  },
-  {
-  "title": "The Martian",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Yellow",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "Mad Max: Fury Road",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "Take Me to Church",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Color Purple",
-  "format": [
-  "book",
-  "film"
   ]
   },
   {
@@ -730,26 +582,7 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "My Girl",
-  "format": [
-  "song"
-  ]
-  },
-  {
   "title": "The Hunger Games",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "White Rabbit",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Jungle Book",
   "format": [
   "book",
   "film"
@@ -762,40 +595,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Purple Haze",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Help",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Clocks",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "Uptown Girl",
-  "format": [
-  "song"
-  ]
-  },
-  {
   "title": "Hurt",
   "format": [
   "song"
-  ]
-  },
-  {
-  "title": "Babe",
-  "format": [
-  "film"
   ]
   },
   {
@@ -805,28 +607,8 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Like a Virgin",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "The Maltese Falcon",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
   "title": "Donnie Darko",
   "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Catcher Was a Spy",
-  "format": [
-  "book",
   "film"
   ]
   },
@@ -843,64 +625,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Color of Magic",
-  "format": [
-  "book",
-  "tv series"
-  ]
-  },
-  {
-  "title": "The Man Who Knew Too Much",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Iron Giant",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Third Man",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "A Confederacy of Dunces",
-  "format": [
-  "book"
-  ]
-  },
-  {
   "title": "Crouching Tiger, Hidden Dragon",
   "format": [
   "film"
-  ]
-  },
-  {
-  "title": "The Road Less Traveled",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Master and Margarita",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The 400 Blows",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Canterbury Tales",
-  "format": [
-  "book"
   ]
   },
   {
@@ -930,34 +657,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Cement Garden",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The King in Yellow",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "Blue Velvet",
-  "format": [
-  "film"
-  ]
-  },
-  {
   "title": "Falling Down",
   "format": [
   "film"
-  ]
-  },
-  {
-  "title": "The Drowned World",
-  "format": [
-  "book"
   ]
   },
   {
@@ -970,52 +672,6 @@ const charadeSeedData = [
   {
   "title": "A Serious Man",
   "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Go-Between",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Third Policeman",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "Waking Life",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Postman Always Rings Twice",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Day of the Jackal",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Vernon God Little",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Adventures of Baron Munchausen",
-  "format": [
-  "book",
   "film"
   ]
   },
@@ -1039,213 +695,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Wasp Factory",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "Dogville",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Secret Agent",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
   "title": "The Elephant Man",
   "format": [
   "film"
   ]
   },
   {
-  "title": "The Idiot",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Crying of Lot 49",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Long Goodbye",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "No Country for Old Men",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Ruling Class",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Heart Is a Lonely Hunter",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Confederacy of Dunces",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Tin Drum",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Damned",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Witches of Eastwick",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "A Simple Plan",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Brick Lane",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Manhunter",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Black Dahlia",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Diving Bell and the Butterfly",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Sorrow of War",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "K-PAX",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Player of Games",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "All the Pretty Horses",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Stranger Than Fiction",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Outsiders",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Less Than Zero",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Unbearable Lightness of Being",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Inherent Vice",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Art of Racing in the Rain",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Brighton Rock",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
   "title": "The Spy Who Came in from the Cold",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "I Am Legend",
   "format": [
   "book",
   "film"
@@ -1259,123 +715,8 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Other Boleyn Girl",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Tinker Tailor Soldier Spy",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "American Psycho",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Plague",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Shipping News",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Boys from Brazil",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Sheltering Sky",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Name of the Rose",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Killer Inside Me",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Quiet American",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Magus",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Beach",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Razor's Edge",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Stars My Destination",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Alexandria Quartet",
-  "format": [
-  "book"
-  ]
-  },
-  {
   "title": "Blade Runner",
   "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Secret History",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The French Lieutenant's Woman",
-  "format": [
-  "book",
   "film"
   ]
   },
@@ -1387,182 +728,11 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Remains of the Day",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Name of the Wind",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Woman in White",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "Pan's Labyrinth",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Shadow of the Wind",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Grand Budapest Hotel",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Secret Garden",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Life of Pi",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Rebecca",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Talented Mr. Ripley",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Memoirs of a Geisha",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Cloud Atlas",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Night Circus",
-  "format": [
-  "book"
-  ]
-  },
-  {
   "title": "The Book of Lost Things",
   "format": [
   "book"
   ]
   },
-  {
-  "title": "House of Leaves",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Prestige",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Never Let Me Go",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "Perfume: The Story of a Murderer",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Lighthouse",
-  "format": [
-  "film"
-  ]
-  },
-  {
-  "title": "The Power of the Dog",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The English Patient",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Goldfinch",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Martian Chronicles",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Historian",
-  "format": [
-  "book"
-  ]
-  },
-  {
-  "title": "The Portrait of a Lady",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Lost World",
-  "format": [
-  "book",
-  "film"
-  ]
-  },
-  {
-  "title": "The Bone Collector",
-  "format": [
-  "book",
-  "film"
-  ]
-  }
   ]
 
 module.exports = charadeSeedData;
