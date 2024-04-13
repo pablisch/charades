@@ -5,6 +5,7 @@ import InputField from './InputField';
 import axios from 'axios';
 import './Form.css';
 import baseUrl from '../utils/baseUrl';
+import { capitaliseString } from '../utils/capitaliseString';
 import Button from './Button';
 import ErrorMessage from './ErrorMessage';
 import './AddCharadeForm.css';
@@ -40,9 +41,10 @@ const AddCharadeForm = ({ setCharades, charades }) => {
   const handleSignUpSubmit = async (event) => {
     event.preventDefault();
     setErrorMessage('');
+    const capitalisedTitle = capitaliseString(title);
 
     const titles = charades.map((charade) => charade.title);
-    if (titles.includes(title)) {
+    if (titles.includes(capitalisedTitle)) {
       setErrorMessage('That charade already exists.');
       clearForm();
       return;
@@ -52,7 +54,7 @@ const AddCharadeForm = ({ setCharades, charades }) => {
       const DbResponse = await axios.post(
         `${baseUrl}/api/v1.0/charades/add`,
         {
-          title: title,
+          title: capitalisedTitle,
           format: checkedFormats,
         },
         {
