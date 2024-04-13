@@ -255,7 +255,7 @@ const charadeSeedData = [
   {
   "title": "Baywatch",
   "format": [
-  "TV"
+  "tv show", "film"
   ]
   },
   {
@@ -265,15 +265,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Raiders of the Lost Ark",
+  "title": "The Shape of Water",
   "format": [
   "film"
-  ]
-  },
-  {
-  "title": "Animal Farm",
-  "format": [
-  "book"
   ]
   },
   {
@@ -296,27 +290,21 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Beatles",
-  "format": [
-  "band"
-  ]
-  },
-  {
-  "title": "The Graduate",
+  "title": "Crazy, Stupid, Love",
   "format": [
   "film"
   ]
   },
   {
-  "title": "Wuthering Heights",
+  "title": "Call Me By Your Name",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "Moon River",
+  "title": "One Flew Over the Cuckoo's Nest",
   "format": [
-  "song"
+  "film", "book"
   ]
   },
   {
@@ -326,26 +314,25 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Tell-Tale Heart",
+  "title": "Dawn of the Dead",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "I Will Always Love You",
+  "title": "The Texas Chain Saw Massacre",
   "format": [
   "song"
   ]
   },
   {
-  "title": "The Lord of the Rings: The Two Towers",
+  "title": "Ghost Dog: The Way of the Samurai",
   "format": [
-  "book",
   "film"
   ]
   },
   {
-  "title": "In the Mood for Love",
+  "title": "How to Train Your Dragon",
   "format": [
   "film"
   ]
@@ -357,9 +344,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Thriller",
+  "title": "Edward Scissorhands",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -390,20 +377,20 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Yellow Submarine",
+  "title": "How the Grinch Stole Christmas!",
   "format": [
-  "song"
+  "film", "book"
   ]
   },
   {
-  "title": "The Lord of the Rings: The Return of the King",
+  "title": "The Hurt Locker",
   "format": [
   "book",
   "film"
   ]
   },
   {
-  "title": "The Sixth Sense",
+  "title": "Psycho",
   "format": [
   "film"
   ]
@@ -415,9 +402,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Like a Prayer",
+  "title": "Interview with the Vampire",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -434,13 +421,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "My Way",
+  "title": "Buffy the Vampire Slayer",
   "format": [
-  "song"
+  "film", "tv show"
   ]
   },
   {
-  "title": "The Godfather: Part II",
+  "title": "Madagascar",
   "format": [
   "film"
   ]
@@ -453,13 +440,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Sweet Child o' Mine",
+  "title": "P.S. I Love You",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
-  "title": "Inception",
+  "title": "City of God",
   "format": [
   "film"
   ]
