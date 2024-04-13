@@ -14,15 +14,6 @@ const charadeRoutes = require('./routes/charade');
 
 const app = express();
 
-// const corsOrigin = process.env.CORS_ORIGIN || 'https://charades-pthh.onrender.com';
-// console.log('🪧  >>> CORS:', corsOrigin);
-
-// const corsOptions = {
-//   origin: corsOrigin,
-// };
-
-// app.use(cors(corsOptions));
-
 app.use(cors());
 
 const connectToDatabase = async () => {
