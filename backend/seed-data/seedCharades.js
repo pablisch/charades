@@ -8,15 +8,17 @@ const dbUser = process.env.MONGODB_USER;
 const dbName = process.env.MONGODB_DB;
 const mongoDbUrl = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.auyhe66.mongodb.net/${dbName}`;
 
-mongoose
-  .connect(mongoDbUrl)
-  .then(() => {
+const connectToMongoDb = async () => {
+  try {
+    await mongoose.connect(mongoDbUrl);
     console.log(`🥳 Successfully connected to MongoDB Atlas ${dbName} database! 🌎`);
-  })
-  .catch((error) => {
+  } catch (error) {
     console.log(`😖 Unable to connect to MongoDB Atlas ${dbName} database! ❌`);
     console.error(error);
-  });
+  }
+};
+
+connectToMongoDb();
 
 const clearCharades = async () => {
   await Charade.deleteMany({});
@@ -26,8 +28,6 @@ const insertCharades = async () => {
   await Charade.insertMany(charadeSeedData);
 };
 
-// for TEST db => npm run seed:charades:test
-// for dev/production db => npm run seed:charades
 const seedCharades = async () => {
   try {
     await clearCharades();
