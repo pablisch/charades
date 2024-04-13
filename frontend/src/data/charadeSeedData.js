@@ -13,9 +13,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Imagine",
+  "title": "Die Hard",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -32,27 +32,27 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Bohemian Rhapsody",
-  "format": [
-  "song"
-  ]
-  },
-  {
-  "title": "Casablanca",
+  "title": "The Bourne Identity",
   "format": [
   "film"
   ]
   },
   {
-  "title": "1984",
+  "title": "Suicide Squad",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "Hotel California",
+  "title": "Saving Private Ryan",
   "format": [
-  "song"
+  "book", "film"
+  ]
+  },
+  {
+  "title": "Mission Impossible: Fallout",
+  "format": [
+  "film"
   ]
   },
   {
@@ -99,15 +99,15 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Moby-Dick",
+  "title": "Raiders of the Lost Ark",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
-  "title": "Yesterday",
+  "title": "Gladiator",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -119,7 +119,7 @@ const charadeSeedData = [
   {
   "title": "Catch-22",
   "format": [
-  "book"
+  "book", "film"
   ]
   },
   {
@@ -149,13 +149,13 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Billie Jean",
+  "title": "Fu Man Chu",
   "format": [
   "song"
   ]
   },
   {
-  "title": "The Matrix",
+  "title": "The Matrix Reloaded",
   "format": [
   "film"
   ]
@@ -163,13 +163,13 @@ const charadeSeedData = [
   {
   "title": "Alice's Adventures in Wonderland",
   "format": [
-  "book"
+  "book", "film"
   ]
   },
   {
-  "title": "Hey Jude",
+  "title": "Wonder Woman 1984",
   "format": [
-  "song"
+  "film"
   ]
   },
   {
@@ -192,7 +192,7 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Crime and Punishment",
+  "title": "Baby Driver",
   "format": [
   "book"
   ]
@@ -204,15 +204,15 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "Titanic",
+  "title": "Superbad",
   "format": [
   "film"
   ]
   },
   {
-  "title": "The Adventures of Huckleberry Finn",
+  "title": "The Big Lebowski",
   "format": [
-  "book"
+  "film"
   ]
   },
   {
@@ -231,21 +231,19 @@ const charadeSeedData = [
   {
   "title": "The Wizard of Oz",
   "format": [
+  "film", "book"
+  ]
+  },
+  {
+  "title": "Dumb and Dumber",
+  "format": [
   "film"
   ]
   },
   {
-  "title": "Gone Girl",
+  "title": "Jojo Rabbit",
   "format": [
-  "book",
   "film"
-  ]
-  },
-  {
-  "title": "Purple Rain",
-  "format": [
-  "film",
-  "song"
   ]
   },
   {
@@ -255,9 +253,9 @@ const charadeSeedData = [
   ]
   },
   {
-  "title": "The Old Man and the Sea",
+  "title": "Baywatch",
   "format": [
-  "book"
+  "TV"
   ]
   },
   {

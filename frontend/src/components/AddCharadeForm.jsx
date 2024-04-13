@@ -50,12 +50,14 @@ const AddCharadeForm = ({ setCharades, charades }) => {
       return;
     }
 
+    const lowercaseFormats = checkedFormats.map((format) => format.toLowerCase());
+
     try {
       const DbResponse = await axios.post(
         `${baseUrl}/api/v1.0/charades/add`,
         {
           title: capitalisedTitle,
-          format: checkedFormats,
+          format: lowercaseFormats,
         },
         {
           headers: {
